@@ -17,15 +17,19 @@ function start(){
         container[i].addEventListener("click", chooseContainer);
         console.log(container[i]);
     }
+    for(i=0; i<5; i++){
+        block[i].addEventListener("click", chooseBlock);
+        console.log(block[i]);
+    }
 };
 
 // blocks need event listeners.
-// function chooseBlock(){
-//     for(i=0; i<5; i++){
-//         block[i].addEventListener("click", function(){});
-//         console.log(block[i]);
-//     }
-// };
+function chooseBlock(){
+    for(i=0; i<5; i++){
+        block[i].addEventListener("click", function(){});
+        console.log(block[i]);
+    }
+};
 
 // choose starting block container
 function chooseContainer(evt){
