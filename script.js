@@ -16,29 +16,32 @@ function start(){
     for(i=0; i<3; i++){
         container[i].addEventListener("click", chooseContainer);
         console.log(container[i]);
-    }
-    for(i=0; i<5; i++){
-        block[i].addEventListener("click", chooseBlock);
-        console.log(block[i]);
-    }
+    }  // blocks need event listeners.
+    // for(i=0; i<5; i++){
+    //     block[i].addEventListener("click", chooseBlock);
+    //     console.log(block[i]);
+    // }
 };
 
-// blocks need event listeners.
-function chooseBlock(){
-    for(i=0; i<5; i++){
-        block[i].addEventListener("click", function(){});
-        console.log(block[i]);
-    }
-};
+// selected block
+// function chooseBlock(){
+//     if (choice= null){
+//         choice = block[i];
+//         console.log(choice);
+//     }
+// };
 
 // choose starting block container
 function chooseContainer(evt){
-    if (fromCont == null && evt.target == container[0]
+    if (fromCont == null
     ){
-        console.log("move");
+        fromCont = evt.target;
+        console.log(fromCont);
     }
-    else{
-        console.log("return");
+    else if(fromCont != null && toCont == null){
+        toCont = evt.target;
+            console.log(toCont);
+        //compare block sizes
     }
 };
 
