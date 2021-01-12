@@ -13,10 +13,13 @@ User should only be able to move top block.
 
 User should only be able to place block on top of a larger block.
 
+Inform user of Win.
+
 User should be able to reset or restart game without refreshing page.
 
 
 extra goals;
+
 track wins.
 
 change difficulty by adding or removing blocks.
