@@ -79,7 +79,17 @@ button {
 }
 
 .win {
-    font-size: larger;
+    margin: 20px 300px;
+
+    font-size: xx-large;
     color: red;
     font-weight: bolder;
+}
+
+.rules {
+    width: 500px;
+    margin: 10px 100px;
+    font-size: large;
+    color: yellow;
+
 }
