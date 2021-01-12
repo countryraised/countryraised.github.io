@@ -34,7 +34,7 @@ function start(){
 
 // choose starting block container  || had all working unless user clicks on empty container first.
 function chooseContainer(evt){
-    if (fromCont == null && evt.target.firstChild !=null) {  
+    if (fromCont == null && evt.target.querySelector(".block") !=null) {  
         fromCont = evt.target;
         choice = fromCont.querySelector(".block");
         // console.log(`from ${fromCont.id}`);
@@ -56,7 +56,7 @@ function chooseContainer(evt){
 // compare chosen block to block in destination container
 // function compare()
 function compare(){
-    if(toCont.firstChild == null) {  //( to container is empty, move block into container)
+    if(toCont.querySelector(".block") == null) {  //( to container is empty, move block into container)
             toCont.appendChild(choice);
             choice.style.background = "red";
             choice = null;
