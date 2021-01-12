@@ -37,27 +37,27 @@ function chooseContainer(evt){
     if (fromCont == null
     ){  
         fromCont = evt.target;
-        fromCont.firstChild=choice;
-        console.log(`from ${fromCont}`);
-        console.log(`block ${choice}`);
+        choice = fromCont.querySelector(".block");
+        console.log(`from ${fromCont.id}`);
+        console.log(`block ${choice.id}`);
+        
     }
     else if(fromCont != null && toCont == null){
         toCont = evt.target;
-            console.log(`to ${toCont}`);
+            console.log(`to ${toCont.id}`);
+            // compare();
         //compare block sizes
     }
 };
 
-
-
-
 // compare chosen block to block in destination container
 // function compare()
 // function compare(){
-//     if//(current block vs existing? block? is there a block?)
-//         (){
-
-//         }
+//     if(toContfirstChild = null) {  //( to container is empty, move block into container)
+                    
+//     }else{
+//                 //compare choice vs toCont 's existing firstChild
+//     }
 // };
 
 // if smaller place block, invalid don't move cancel chosen block?
