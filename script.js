@@ -32,10 +32,9 @@ function start(){
 //     }
 // };
 
-// choose starting block container
+// choose starting block container  || had all working unless user clicks on empty container first.
 function chooseContainer(evt){
-    if (fromCont == null
-    ){  
+    if (fromCont == null && evt.target.firstChild !=null) {  
         fromCont = evt.target;
         choice = fromCont.querySelector(".block");
         // console.log(`from ${fromCont.id}`);
@@ -49,6 +48,8 @@ function chooseContainer(evt){
             console.log(`to ${toCont.id}`);
             compare();
         //compare block sizes
+    }else{
+        start();
     }
 };
 
