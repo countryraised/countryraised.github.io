@@ -36,11 +36,11 @@ function chooseContainer(evt){
     if (fromCont == null
     ){
         fromCont = evt.target;
-        console.log("from " + fromCont);
+        console.log(`from ${fromCont}`);
     }
     else if(fromCont != null && toCont == null){
         toCont = evt.target;
-            console.log("to " + toCont);
+            console.log(`to ${toCont}`);
         //compare block sizes
     }
 };
