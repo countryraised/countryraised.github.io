@@ -38,9 +38,9 @@ function chooseContainer(evt){
     ){  
         fromCont = evt.target;
         choice = fromCont.querySelector(".block");
-        console.log(`from ${fromCont.id}`);
-        console.log(fromCont.firstChild);
-        console.log(`block ${choice.id}`);
+        // console.log(`from ${fromCont.id}`);
+        // console.log(fromCont.firstChild);
+        // console.log(`block ${choice.id}`);
         choice.style.background = "blue";
         
     }
@@ -62,9 +62,24 @@ function compare(){
             fromCont = null;
             toCont =null;
     }
-    // else{
-    //             //compare choice vs toCont 's existing firstChild
-    // }
+    else{      //compare choice vs toCont 's existing firstChild
+        choiceWdth = choice.id.replace(/\D/g,"");      // turning pixel width to an integer
+        toContWdth = toCont.querySelector(".block").id.replace(/\D/g,"");
+        console.log(choiceWdth);
+        console.log(toContWdth);
+        if( choiceWdth < toContWdth) { //then move chioce into container
+            toCont.prependChild(choice);
+            choice.style.background = "red";
+            choice = null;
+            fromCont = null;
+            toCont =null;
+        }else{   // or cancel if move is illegal
+            choice.style.background = "red";
+            choice = null;
+            fromCont = null;
+            toCont =null;
+        }
+    }
 };
 
 // if smaller place block, invalid don't move cancel chosen block?
