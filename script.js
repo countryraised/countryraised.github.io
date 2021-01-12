@@ -68,7 +68,7 @@ function compare(){
         console.log(choiceWdth);
         console.log(toContWdth);
         if( choiceWdth < toContWdth) { //then move chioce into container
-            toCont.prependChild(choice);
+            toCont.insertBefore(choice, toCont.firstChild);
             choice.style.background = "red";
             choice = null;
             fromCont = null;
