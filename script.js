@@ -17,26 +17,29 @@ function start(){
         container[i].addEventListener("click", chooseContainer);
         console.log(container[i]);
     }  // blocks need event listeners.
-    for(i=0; i<5; i++){
-        block[i].addEventListener("click", chooseBlock);
-        console.log(block[i]);
-    }
+    // for(i=0; i<5; i++){
+    //     block[i].addEventListener("click", chooseBlock);
+    //     console.log(block[i]);
+    // }
 };
 
 // selected block
-function chooseBlock(e){
-    if (choice = null){
-        choice = e.target;
-        console.log("block " + choice);
-    }
-};
+// function chooseBlock(e){
+//     if (choice = null){
+//         choice = e.target;
+//         choice.style.background = blue;
+//         console.log("block " + choice);
+//     }
+// };
 
 // choose starting block container
 function chooseContainer(evt){
     if (fromCont == null
-    ){
+    ){  
         fromCont = evt.target;
+        fromCont.firstChild=choice;
         console.log(`from ${fromCont}`);
+        console.log(`block ${choice}`);
     }
     else if(fromCont != null && toCont == null){
         toCont = evt.target;
@@ -44,6 +47,8 @@ function chooseContainer(evt){
         //compare block sizes
     }
 };
+
+
 
 
 // compare chosen block to block in destination container
@@ -60,3 +65,16 @@ function chooseContainer(evt){
 
 
 // ?cancel chosen block
+
+
+
+
+// Recursion. I believe this allows completion of the game without moving peices individually?
+
+//moveTower(disk, source, dest, spare);  for:: disk=5 source=A dest=B spare=C
+//  If disk == 0 then: move disk from source to destination.
+//  Else 
+//      MoveTower(disk -1, souece, spare, dest)
+//      move disk from source to destination
+//      MoveTower(disk-1), spare, dest, source)
+//  End If
