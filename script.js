@@ -1,12 +1,13 @@
 // container and block selectors
 const container = document.querySelectorAll(".container");
 const block = document.querySelectorAll(".block");
-
+const reset = document.querySelector(".reset");
 
 // store selected block and containers from and to
 let choice ;   //selected block
 let fromCont ;     //1st selcted container
 let toCont ;    //2nd selected destination container
+let original= document.querySelector(".gamecontainer").innerHTML;
 
 // game starts when page refreshed?
 document.onload = start();
@@ -83,14 +84,22 @@ function compare(){
     }
 };
 
-// if smaller place block, invalid don't move cancel chosen block?
-// add block to destination container
+reset.addEventListener("click", function(){
+    location.reload();
+    // document.querySelector(".gamecontainer").innerHTML = original;
+    // // resetBoard();
+    // choice = null;
+    // fromCont = null;
+    // toCont =null;
+    // start();
+});
 
-
-// ?cancel chosen block
-
-
-
+// function resetBoard() {
+//     document.querySelector("#cntnTwo").innerHTML = "";
+//     document.querySelector("#cntnThree").innerHTML = "";
+//     document.querySelector("#cntnThree").innerHTML = "";
+//     createElement()
+// }
 
 // Recursion. I believe this allows completion of the game without moving peices individually?
 
