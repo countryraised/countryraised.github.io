@@ -67,14 +67,15 @@ function compare(){
     else{      //compare choice vs toCont 's existing firstChild
         choiceWdth = choice.id.replace(/\D/g,"");      // turning pixel width to an integer
         toContWdth = toCont.querySelector(".block").id.replace(/\D/g,"");
-        console.log(choiceWdth);
-        console.log(toContWdth);
+        // console.log(choiceWdth);
+        // console.log(toContWdth);
         if( choiceWdth < toContWdth) { //then move chioce into container
             toCont.insertBefore(choice, toCont.firstChild);
             choice.style.background = "red";
             choice = null;
             fromCont = null;
             toCont =null;
+            win();
         }else{   // or cancel if move is illegal
             choice.style.background = "red";
             choice = null;
@@ -83,6 +84,18 @@ function compare(){
         }
     }
 };
+
+function win(){
+    if(container[0].querySelector(".block") == null && container[1].querySelector(".block") == null){
+        console.log("You win.");
+        let winner = document.querySelector(".win");
+        winner.innerHTML = "YOU WIN!!!";
+                
+    }
+    else{
+        return
+    }
+}
 
 reset.addEventListener("click", function(){
     location.reload();
@@ -101,8 +114,10 @@ reset.addEventListener("click", function(){
 //     createElement()
 // }
 
-// Recursion. I believe this allows completion of the game without moving peices individually?
 
+
+
+// Recursion. I believe this allows completion of the game without moving peices individually?
 //moveTower(disk, source, dest, spare);  for:: disk=5 source=A dest=B spare=C
 //  If disk == 0 then: move disk from source to destination.
 //  Else 

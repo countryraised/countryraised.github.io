@@ -15,7 +15,7 @@ button {
 .gamecontainer {
     
     width: 750px;
-    height: 500px;
+    height: 400px;
     background: white;
     display: flex;
     /* align-items: center;
@@ -78,4 +78,8 @@ button {
     height: 30px;
 }
 
-
+.win {
+    font-size: larger;
+    color: red;
+    font-weight: bolder;
+}
