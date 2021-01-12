@@ -39,26 +39,33 @@ function chooseContainer(evt){
         fromCont = evt.target;
         choice = fromCont.querySelector(".block");
         console.log(`from ${fromCont.id}`);
+        console.log(fromCont.firstChild);
         console.log(`block ${choice.id}`);
+        choice.style.background = "blue";
         
     }
     else if(fromCont != null && toCont == null){
         toCont = evt.target;
             console.log(`to ${toCont.id}`);
-            // compare();
+            compare();
         //compare block sizes
     }
 };
 
 // compare chosen block to block in destination container
 // function compare()
-// function compare(){
-//     if(toContfirstChild = null) {  //( to container is empty, move block into container)
-                    
-//     }else{
-//                 //compare choice vs toCont 's existing firstChild
-//     }
-// };
+function compare(){
+    if(toCont.firstChild == null) {  //( to container is empty, move block into container)
+            toCont.appendChild(choice);
+            choice.style.background = "red";
+            choice = null;
+            fromCont = null;
+            toCont =null;
+    }
+    // else{
+    //             //compare choice vs toCont 's existing firstChild
+    // }
+};
 
 // if smaller place block, invalid don't move cancel chosen block?
 // add block to destination container
