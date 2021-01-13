@@ -16,14 +16,17 @@ User should only be able to place block on top of a larger block.
 
 Inform user of Win.
 
-User should be able to reset or restart game without refreshing page.
-
 
 ## extra goals;
+User should be able to reset or restart game without refreshing page.(complete)
 
 track wins. (completed)
 
 change difficulty by adding or removing blocks.
+
+track number of moves.
+
+timer.
 
 
 ## things I tried along the way
