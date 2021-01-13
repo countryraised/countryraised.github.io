@@ -87,6 +87,11 @@ button {
 p{
     text-align: center;
 }
+.winCnt{
+    margin: 5px 300px;
+    font-size: x-large;
+    color: white;
+}
 
 .win {
     margin: 20px 300px;
