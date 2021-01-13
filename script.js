@@ -27,7 +27,7 @@ function chooseContainer(evt){
     }
     else if(fromCont != null && toCont == null){
         toCont = evt.target;
-            console.log(`to ${toCont.id}`);
+            // console.log(`to ${toCont.id}`);
             compare();
         //compare block sizes
     }else{
@@ -45,7 +45,7 @@ function compare(){
             toCont =null;
     }
     else{      //compare choice vs toCont 's existing firstChild
-        choiceWdth = choice.id.replace(/\D/g,"");      // turning pixel width to an integer
+        choiceWdth = choice.id.replace(/\D/g,"");      // turning id to an integer
         toContWdth = toCont.querySelector(".block").id.replace(/\D/g,"");
         
         if( choiceWdth < toContWdth) { //then move chioce into container
@@ -66,7 +66,7 @@ function compare(){
 
 function win(){
     if(container[0].querySelector(".block") == null && container[1].querySelector(".block") == null){
-        console.log("You win.");
+        // console.log("You win.");
         let winner = document.querySelector(".win");
         winner.innerHTML = "YOU WIN!!!";
         winCount++;
@@ -86,6 +86,9 @@ function resetBoard() {
     document.querySelector("#cntnTwo").innerHTML = "";
     document.querySelector("#cntnThree").innerHTML = "";
     document.querySelector(".win").innerHTML = "";
+    choice = null;
+    fromCont = null;
+    toCont =null;
     for(i=1; i<6; i++){
         let newDiv = document.createElement("div");
         newDiv.setAttribute("id", "bl"+[i]);
