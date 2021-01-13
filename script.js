@@ -85,6 +85,7 @@ function resetBoard() {
     document.querySelector("#cntnOne").innerHTML = "";
     document.querySelector("#cntnTwo").innerHTML = "";
     document.querySelector("#cntnThree").innerHTML = "";
+    document.querySelector(".win").innerHTML = "";
     for(i=1; i<6; i++){
         let newDiv = document.createElement("div");
         newDiv.setAttribute("id", "bl"+[i]);
