@@ -12,7 +12,7 @@ User should be able to to move top block from 1 column to next.
 
 User should only be able to move top block. 
 
-User should only be able to place block on top of a larger block.(found a condition this fails)
+User should only be able to place block on top of a larger block.
 
 Inform user of Win.
 

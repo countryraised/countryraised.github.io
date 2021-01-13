@@ -74,7 +74,7 @@ function win(){
         let winner = document.querySelector(".win");
         winner.innerHTML = "YOU WIN!!!";
         // winCount++;
-                
+                        
     }
     else{
         return
@@ -82,7 +82,18 @@ function win(){
 }
 
 reset.addEventListener("click", function(){
-    location.reload();
+    // location.reload();
+    resetBoard()
 });
 
-
+function resetBoard() {
+    document.querySelector("#cntnOne").innerHTML = "";
+    document.querySelector("#cntnTwo").innerHTML = "";
+    document.querySelector("#cntnThree").innerHTML = "";
+    for(i=1; i<6; i++){
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("id", "bl"+[i]);
+        newDiv.setAttribute("class", "block");
+        document.querySelector("#cntnOne").appendChild(newDiv);  
+    }   
+}
