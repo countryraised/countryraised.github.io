@@ -6,7 +6,7 @@ Puzzle strategy game of moving blocks in order to another position.
 I used Javascript, css, and html.
 
 
-MVP to work.
+## MVP to work.
 
 User should be able to to move top block from 1 column to next.
 
@@ -19,24 +19,24 @@ Inform user of Win.
 User should be able to reset or restart game without refreshing page.
 
 
-extra goals;
+## extra goals;
 
-track wins.
+track wins. (completed)
 
 change difficulty by adding or removing blocks.
 
 
-things I tried along the way
+## things I tried along the way
 
 Putting event listeners on the blocks at the same time as the containers. 
 This caused issues with clicking on a block did not trigger the event on the container also.
 
-const block = document.querySelectorAll(".block");
+// const block = document.querySelectorAll(".block");
 // blocks need event listeners.
-    // for(i=0; i<5; i++){
-    //     block[i].addEventListener("click", chooseBlock);
-    //     console.log(block[i]);
-    // }
+// for(i=0; i<5; i++){
+//     block[i].addEventListener("click", chooseBlock);
+//     console.log(block[i]);
+// }
 
 // function chooseBlock(e){
 //     if (choice = null){
