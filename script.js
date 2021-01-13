@@ -8,7 +8,7 @@ let choice ;   //selected block
 let fromCont ;     //1st selcted container
 let toCont ;    //2nd selected destination container
 let original= document.querySelector(".gamecontainer").innerHTML;
-
+let winCount = 0;
 // game starts when page refreshed?
 document.onload = start();
 

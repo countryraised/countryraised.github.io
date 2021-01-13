@@ -1,21 +1,27 @@
 body{
-   background: black; 
+    width:1000px;
+    background: black; 
 }
 
 h1 {
-    margin: 30px;
+    text-align: center;
+    margin: 30px 250px;
+    font-size: xx-large;
     color: white;
     /* text-align: relative; */
 }
 
 button {
-    margin: 20px;
+    text-align: center;
+    margin: 20px 450px;
+    width: 100px
 }
 
 .gamecontainer {
     
     width: 750px;
     height: 400px;
+    margin: 0 125px;
     background: white;
     display: flex;
     /* align-items: center;
@@ -78,6 +84,10 @@ button {
     height: 30px;
 }
 
+p{
+    text-align: center;
+}
+
 .win {
     margin: 20px 300px;
 
@@ -86,10 +96,9 @@ button {
     font-weight: bolder;
 }
 
-.rules {
+.rules {     
     width: 500px;
-    margin: 10px 100px;
-    font-size: large;
+    margin: 10px 250px;
+    font-size: larger;
     color: yellow;
-
 }
